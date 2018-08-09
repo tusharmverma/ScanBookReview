@@ -12,12 +12,14 @@
 		8D5B1F8D210D348100A5A56E /* APIBookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F8C210D348100A5A56E /* APIBookInfo.swift */; };
 		8D5B1F8F210D38D500A5A56E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F8E210D38D500A5A56E /* ModalViewController.swift */; };
 		8D5B1F92210D4AC100A5A56E /* PhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F91210D4AC100A5A56E /* PhotoHelper.swift */; };
-		8D5B1F94210D6A9900A5A56E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F93210D6A9900A5A56E /* ResultTableViewController.swift */; };
+		8D5B1F94210D6A9900A5A56E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F93210D6A9900A5A56E /* ResultViewController.swift */; };
 		8D5B1F96210D6E4400A5A56E /* TextRecognitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F95210D6E4400A5A56E /* TextRecognitionHelper.swift */; };
 		8D5B1F98210F834800A5A56E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B1F97210F834800A5A56E /* PreviewViewController.swift */; };
 		8D68EA622113980B00FEB200 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D68EA612113980B00FEB200 /* ResultTableViewCell.swift */; };
 		8D8D2850211A1EA30075105B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D284F211A1EA30075105B /* GoogleService-Info.plist */; };
 		8D8D2854211A449C0075105B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D2853211A449C0075105B /* LaunchScreen.storyboard */; };
+		8D95984B211BACBF00B5CF38 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95984A211BACBF00B5CF38 /* ReviewTableViewController.swift */; };
+		8D95984D211BACED00B5CF38 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95984C211BACED00B5CF38 /* ReviewTableViewCell.swift */; };
 		8D99892B211372B100FD257E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D99892A211372B100FD257E /* Section.swift */; };
 		8DA501E2210D287200E41BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA501E1210D287200E41BB2 /* AppDelegate.swift */; };
 		8DA501E4210D287200E41BB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA501E3210D287200E41BB2 /* ViewController.swift */; };
@@ -42,12 +44,14 @@
 		8D5B1F8C210D348100A5A56E /* APIBookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBookInfo.swift; sourceTree = "<group>"; };
 		8D5B1F8E210D38D500A5A56E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		8D5B1F91210D4AC100A5A56E /* PhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHelper.swift; sourceTree = "<group>"; };
-		8D5B1F93210D6A9900A5A56E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		8D5B1F93210D6A9900A5A56E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8D5B1F95210D6E4400A5A56E /* TextRecognitionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionHelper.swift; sourceTree = "<group>"; };
 		8D5B1F97210F834800A5A56E /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		8D68EA612113980B00FEB200 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = Service/ResultTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		8D8D284F211A1EA30075105B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D8D2853211A449C0075105B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D95984A211BACBF00B5CF38 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		8D95984C211BACED00B5CF38 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewTableViewCell.swift; path = Controllers/ReviewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		8D99892A211372B100FD257E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Service/Section.swift; sourceTree = SOURCE_ROOT; };
 		8DA501DE210D287200E41BB2 /* ScanNReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanNReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA501E1210D287200E41BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				8D99892A211372B100FD257E /* Section.swift */,
 				8D68EA612113980B00FEB200 /* ResultTableViewCell.swift */,
 				8DBB35F121166EDE001E1CBD /* OnboardingView.swift */,
+				8D95984C211BACED00B5CF38 /* ReviewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,7 +187,8 @@
 				8DA501E3210D287200E41BB2 /* ViewController.swift */,
 				8D5B1F8E210D38D500A5A56E /* ModalViewController.swift */,
 				8D5B1F97210F834800A5A56E /* PreviewViewController.swift */,
-				8D5B1F93210D6A9900A5A56E /* ResultTableViewController.swift */,
+				8D5B1F93210D6A9900A5A56E /* ResultViewController.swift */,
+				8D95984A211BACBF00B5CF38 /* ReviewTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -385,12 +391,14 @@
 				8D5B1F8D210D348100A5A56E /* APIBookInfo.swift in Sources */,
 				8DBB35F221166EDE001E1CBD /* OnboardingView.swift in Sources */,
 				8DA501EA210D287200E41BB2 /* Scan_n_Review.xcdatamodeld in Sources */,
+				8D95984B211BACBF00B5CF38 /* ReviewTableViewController.swift in Sources */,
 				8D5B1F92210D4AC100A5A56E /* PhotoHelper.swift in Sources */,
 				8D5B1F8F210D38D500A5A56E /* ModalViewController.swift in Sources */,
 				8DF057D12112AA600077C892 /* APIBookReviews.swift in Sources */,
 				8DCEFC38210FB04E00C6F3A1 /* UIUtilities.swift in Sources */,
 				8D68EA622113980B00FEB200 /* ResultTableViewCell.swift in Sources */,
-				8D5B1F94210D6A9900A5A56E /* ResultTableViewController.swift in Sources */,
+				8D95984D211BACED00B5CF38 /* ReviewTableViewCell.swift in Sources */,
+				8D5B1F94210D6A9900A5A56E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

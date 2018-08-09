@@ -1,10 +1,11 @@
 //
-//  ResultViewController.swift
-//  Scan n Review
+//  ReviewTableViewController.swift
+//  ScanNReview
 //
-//  Created by Tushar  Verma on 7/28/18.
+//  Created by Tushar  Verma on 8/8/18.
 //  Copyright © 2018 Tushar Verma. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
@@ -13,46 +14,24 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class ResultTableViewController: UIViewController{
+class ReviewTableViewController: UIViewController{
     // MARK: Text Recognition
     var bookI: Book!
     var bookR: [BookReview]!
     var bookC: BookCover!
-    
-    @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var bookLogoImageView: UIImageView!
-    @IBOutlet weak var tileLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
-    @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var genreLabel: UILabel!
+
     @IBOutlet weak var tableView: UITableView!
     
-    func showBookData(){
-        let url = URL(string: bookC.bookCover)
-        bookLogoImageView.kf.setImage(with: url)
-        tileLabel.text = bookI.title
-        subTitleLabel.text = bookI.subTitle
-        releaseDateLabel.text = bookI.releaseDate
-        authorLabel.text = bookI.author
-        genreLabel.text = bookI.genre
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        topView.setGradientForResultTableViewBackground(colorOne: Colors.kindaBlue, colorTwo: Colors.kindaBlue)
-        view.setGradientResultViewBackground(colorOne: Colors.kindaWhite, colorTwo: Colors.kindaWhite)
-        tileLabel.adjustsFontSizeToFitWidth = true
-        tileLabel.minimumScaleFactor = 0.2
-        subTitleLabel.adjustsFontSizeToFitWidth = true
-        subTitleLabel.minimumScaleFactor = 0.2
-        tableView.delegate = self
-        tableView.dataSource = self
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
         tableView.reloadData()
-        showBookData()
-        // use kingfisher to download images from url
-        // Initialize the on-device text dectector
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? ResultViewController
+        vc?.bookR = self.bookR
+        vc?.bookI = self.bookI
+        vc?.bookC = self.bookC
     }
     
     override var shouldAutorotate: Bool {
@@ -66,11 +45,16 @@ class ResultTableViewController: UIViewController{
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .portrait
     }
-
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goBackToResults", sender: self)
+    }
+    
 }
 
 
-extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource {
+extension ReviewTableViewController: UITableViewDelegate, UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,9 +67,15 @@ extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "resultTableViewCell", for: indexPath) as! ResultTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewTableViewCell", for: indexPath) as! ReviewTableViewCell
         cell.setGradientForResultTableViewBackground(colorOne: Colors.darkGrey, colorTwo: Colors.darkGrey)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.starRating.adjustsFontSizeToFitWidth = true
+        cell.starRating.minimumScaleFactor = 0.2
+        cell.source.adjustsFontSizeToFitWidth = true
+        cell.source.minimumScaleFactor = 0.2
+        cell.snippet.adjustsFontSizeToFitWidth = true
+        cell.snippet.minimumScaleFactor = 0.2
         let url = URL(string: bookR[indexPath.row].sourceLogo)
         cell.sourceLogo.kf.setImage(with: url)
         cell.snippet.text = bookR[indexPath.row].snippet
@@ -104,12 +94,12 @@ extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource 
         cell.date.text = bookR[indexPath.row].reviewDate
         return cell
     }
-    
+
 
 }
 
 extension UITableView {
-    
+
     func setEmptyMessage(_ message: String) {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
@@ -118,11 +108,11 @@ extension UITableView {
         messageLabel.textAlignment = .center;
         messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
         messageLabel.sizeToFit()
-        
+
         self.backgroundView = messageLabel;
         self.separatorStyle = .none;
     }
-    
+
     func restore() {
         self.backgroundView = nil
         self.separatorStyle = .singleLine

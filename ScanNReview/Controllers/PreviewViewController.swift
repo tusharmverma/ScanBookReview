@@ -83,7 +83,7 @@ class PreviewViewController: UIViewController{
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as? ResultTableViewController
+        let vc = segue.destination as? ResultViewController
         vc?.bookI = self.book
         vc?.bookR = self.bookReview
         vc?.bookC = self.bookCover

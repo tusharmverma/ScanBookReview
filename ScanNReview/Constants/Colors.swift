@@ -26,5 +26,7 @@ struct Colors {
     static let kindaBlue = UIColor(red:0.17, green:0.27, blue:0.45, alpha:1.0)
     static let kindaPink = UIColor(red:0.95, green:0.02, blue:0.45, alpha:1.0)
     static let kindaWhite = UIColor(red:0.99, green:0.97, blue:0.97, alpha:1.0)
+    static let softBlue = UIColor(red:0.24, green:0.49, blue:0.70, alpha:1.0)
+    static let lightBlue = UIColor(red:0.16, green:0.39, blue:0.59, alpha:1.0)
 }
 
